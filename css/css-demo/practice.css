@@ -1,0 +1,25 @@
+#contact-info {
+
+  font-size: .8em;
+}
+
+
+.job {
+  background-color:#e9e5dc;
+  margin-top: 20px;
+  padding:50px;
+  border-radius:100px;
+}
+
+.job:hover{
+    background-color:white;
+
+}
+
+.job-description {
+  font-size: .8em;
+}
+
+section#contact-info {
+  color:blue;
+}
