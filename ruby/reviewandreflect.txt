@@ -1,0 +1,3 @@
+#1. What is a variable? Why might a programmer use a variable?
+
+A variable is an element that can be called through a single word. Programmers might use variables when they want data that can be modified (i.e.: with the question “what’s your favorite color?” favorite_color could be used in place of many different answers from different users) or just to simplify their code (i.e.: section_one could be used for one section of html so that you could manipulate how the data is displayed without being distracted by the actual content inside of it). 
