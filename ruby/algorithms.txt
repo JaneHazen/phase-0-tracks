@@ -1,0 +1,21 @@
+1. Using an elevator: 
+
+Get information about which floor (Floor_number) to use from the address of where you are going. 
+Step into elevator
+Reach out arm 
+Until you reach (Floor_number) scan from left to right, then go down one number and repeat. 
+Move your arm towards the button corresponding to (Floor_number)
+Push in and wait.
+
+
+2. Brushing teeth on an algorithm:
+
+grab toothbrush with one hand and hold parallel to the floor, bristle side up. 
+grab toothpaste with the other hand and place vertically, perpendicular to the bristle of the toothbrush.
+squeeze and move until you reach the end of the bristles.
+set the toothpaste down.
+open mouth. 
+move toothbrush into mouth.
+for 3 minutes, move the bristle side of the brush along your teeth in circles, following the row of teeth from top right to top left, spinning around to the bottom left and ending up at the bottom right.
+put the toothbrush under water
+spit 
