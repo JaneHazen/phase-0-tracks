@@ -1,3 +1,38 @@
-#1. What is a variable? Why might a programmer use a variable?
+# Variables
 
-A variable is an element that can be called through a single word. Programmers might use variables when they want data that can be modified (i.e.: with the question “what’s your favorite color?” favorite_color could be used in place of many different answers from different users) or just to simplify their code (i.e.: section_one could be used for one section of html so that you could manipulate how the data is displayed without being distracted by the actual content inside of it). 
+##1 A variable is an element that can be called through a single word. Programmers might use variables when they want data that can be modified (i.e.: with the question “what’s your favorite color?” favorite_color could be used in place of many different answers from different users) or just to simplify their code (i.e.: section_one could be used for one section of html so that you could manipulate how the data is displayed without being distracted by the actual content inside of it). 
+
+##2. full_name = first_name + last_name will simply create a variable that is AbrahamLincoln because the variable first_name is Abraham and the variable last_name is Lincoln. 
+
+# Data Types 
+
+##String: a line of characters (could be used to store a row of text) 
+##Integer: numbers (could be used to store numerical information/dates)
+##Float: A floating-point number that uses decimal points (could be used for statistics) 
+##Nil: this is where there is no data entry (this could be used for any kind of graph or table where there isn’t information on a row)
+##Boolean: This is a true/false statement (“this code works” “false”) 
+
+#Algorithms 
+
+##4. An algorithm is a structure with steps or rules used to solve problems. 
+##5. Two examples of commonly used algorithms include searching (like looking for a specific file name) or finding the shortest path between two points (like using gps)
+
+#Methods
+
+## A method is used because the code can be reused multiple times without rewriting the entire function.
+##Return value: the product of the method
+##Side effect: the modification of something (like enabling or disabling a button or changing a variable)
+##Parameter: The variable you will pass through the method 
+##Argument: The actual data you will put into the parameter (the variable passed through the method)
+##Implicit return: If you don’t type “return” it will still return the result of the method. 
+
+#Control Flow
+
+## Control Flow shapes the order in which functions are carried out. 
+
+##Loop: a loop will return to step one after completing all steps until a specific condition has been met. 
+##if: is a way out of a loop- IF a condition has or has not been met, it will tell the computer to do something.
+##else: this is used if the IF conditional statement has not been met
+##elsif: this is used as another option- so if there are 3+ options you can’t simply have “if” this is met do this, “else” otherwise do this; you can add the “elsif” in between to continue writing possible outcomes.
+##while: this says that as long as the condition stated is true it will fulfill whatever function you type out.
+##until: this says that until the condition you state is fulfilled it will continue executing whatever function you type out (the inverse of while) 
