@@ -1,5 +1,5 @@
 puts "How many employees will be processed in this survey?"
-employee_number = gets.chomp.to_i
+employee_number = gets.chomp
 
 def get_garlic_preference
   puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
@@ -17,7 +17,6 @@ end
 
 def get_health_preference
   puts "Would you like to enroll in the company's health insurance? (y/n)"
-
   @health_preference = gets.chomp
   until @health_preference == "y" || @health_preference == "n"
     puts "I didn't understand the question. What?"
@@ -33,10 +32,10 @@ end
 
 def get_age
   puts "How old are you?"
-  @get_age = gets.chomp
-  begin until @get_age.is_a? Integer
+  @age = gets.chomp
+  until @age.is_an_int == true
     puts "I need a number."
-    @get_age = gets.chomp
+    @age = gets.chomp
   end
 end
 
