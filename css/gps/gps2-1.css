@@ -1,0 +1,33 @@
+h1 {
+  color:blue;
+  text-align: center;
+}
+
+h2 {
+  color:green;
+}
+
+p {
+  color:gray;
+   }
+
+.column-1 {
+  display: inline-block;
+  float: left;
+  width: 40%;
+  margin:3%;
+  border: 3px solid black;
+}
+
+.column-2 {
+  display: inline-block;
+  float: right ;
+  width:40%;
+  margin:3%;
+  border: 3px solid black;
+}
+
+footer {
+ display:inline-block;
+ float:bottom;
+ }
