@@ -26,17 +26,23 @@ end
 encrypt("mabel")
 
 def decrypt(secret_message)
-  index = 0
-  first_letter = secret_message[0]
-  while index < secret_message.length - 1
-    p secret_message[index]
-    secret_message[index] = secret_message[index - 1]
-    index +=1
+  letter_index = 0
+  alpha = "abcdefghijklmnopqrstuvwxyz"
+  new_message = ""
+
+  while letter_index < secret_message.length
+     /# figure out the index #/
+    if secret_message[letter_index]== " "
+      p secret_message[letter_index]
+    else
+      p secret_message[letter_index]
+      alpha_index = alpha.index(secret_message[letter_index])
+      alpha_index = alpha_index - 1
+      new_message += alpha[alpha_index]
+      letter_index +=1
+
+    end
   end
-  secret_message[-1] = first_letter
-  return secret_message
-
+      puts "#{new_message}"
 end
-
-encrypt("mabel")
-decrypt
+decrypt("abc")
