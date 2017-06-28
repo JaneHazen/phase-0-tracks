@@ -1,21 +1,15 @@
-arr = [1, 2, 3, 4, 5]
-
-nums = {}
-arr.each do |number, position|
-  position = 0
-    while position < arr.length
-    nums = {number => position}
-    position +=  1
+def search_array(arr, integer)
+  index = 0
+  arr.each do |number|
+    if integer == number
+      return index
     end
+    index += 1
+  end
+  nil
 end
-p nums
 
+arr = [42, 89, 23, 1]
 
+p search_array(arr, 4)
 
-# assign a hash for each number in the array that identifies the number in the array as the key and the index number as the value
-
-
-
-def search_array(arr, position)
-
-end
