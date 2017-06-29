@@ -1,0 +1,19 @@
+# Data Structures
+
+1. Data structures are useful to programmers for storing large amounts of information. 
+
+# Arrays 
+2. An array is an ordered list of characters (can be strings, integers, or booleans) that is indexed from 0 up. 
+3. An array might be good for listing books that someone has or food items in a refrigerator. 
+
+#Hashes 
+4. A hash is an ordered series of information that groups its components into two sections: keys and values. 
+5. A hash might be well suited to connect a username and password or to put things into sections 
+
+#Iteration 
+6. Iteration is useful because it allows you to go through each section. 
+7. If you wanted to find your keys you would have to look under each of the pillows on your couch. 
+
+#Blocks
+8. A block is an object, so a section of independent, functional code. 
+9. Parameters are what you pass through the code, but the whole block can also be yielded or blocked. 
