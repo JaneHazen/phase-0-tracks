@@ -103,14 +103,19 @@ p extinct_animals
 # Build a method  using #each that checks if an animal is in the hash and returns true/false.
 # Call the method in your driver code with each of the following animals to check if
 # they are extinct or not:
+# animals = ["Andean Cat", "Dodo", "Saiga Antelope"]
 # "Andean Cat"
 # "Dodo"
 # "Saiga Antelope"
-# Driver code example: is_extinct?(extinct_animals, "Andean Cat")
+# Driver code example: is_extinct?(extinct_animals, animals)
+# Iterate through the animals array using .each
+# if the extinct animals hash has the animal as a key
+# print out to consol this animal name was extinct on (date)
+# else
+# print this animal is still around
 # ----
 
-def is_it_dead(thing)
-  extinct_animals = {
+extinct_animals = {
   "Passenger Pigeon" => 1914,
   "Tasmanian Tiger" => 1936,
   "Eastern Hare Wallaby" => 1890,
@@ -118,17 +123,27 @@ def is_it_dead(thing)
   "Pyrenean Ibex" => 2000,
   "West African Black Rhinoceros" => 2011,
   "Laysan Crake" => 1923
-}
+    }
+animals = ["andean Cat", "Dodo", "Saiga Antelope"]
 
-  extinct_animals.each {|animal, year|
-    if animal == thing
-      puts "The #{thing} is extinct"
+def is_it_dead(array, hash)
+
+  array.each do |animal|
+    if hash[animal] == nil
+      p "#{animal.capitalize} is not extinct"
+    else
+      p "The #{animal} was gone by #{hash[animal]}.  "
     end
-  }
+    # # if hash[:thing] == nil
+    #   puts "It's not extinct"
+    # else puts "it's extinct"
+    # end
+
+  end
 
 end
 
-puts is_it_dead("Dodo")
+puts is_it_dead(animals, extinct_animals)
 
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
