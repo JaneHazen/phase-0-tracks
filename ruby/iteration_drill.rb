@@ -30,8 +30,12 @@ p find_thing("compass")
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5, using #each.
 # ----
-zombie_apocalypse_supplies.delete("compass")
+zombie_apocalypse_supplies.each do |x|
+  zombie_apocalypse_supplies.delete("hatchet")
+
+end
 p zombie_apocalypse_supplies
+
 
 # 4. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
@@ -40,7 +44,15 @@ p zombie_apocalypse_supplies
 # documentation for Arrays.
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
+
+
+things_we_have = (zombie_apocalypse_supplies + other_survivor_supplies).uniq
+
+p things_we_have
+
+
 # ----
+
 
 # Hash Drills
 
@@ -57,15 +69,32 @@ extinct_animals = {
 # 1. Iterate through extinct_animals hash using #each, printing each key/value pair
 # with a dash in between the key and value, and an asterisk between each pair.
 # ----
+extinct_animals.each do |x,y|
+  print "#{x} - #{y} * "
+end
+
 
 # 2. Keep only animals in extinct_animals if they were extinct before
 # the year 2000, using #each.
 # ----
+extinct_animals.each do |x,y|
+  if y < 2000
+  print "#{x} * "
+  else extinct_animals.delete(x)
+  end
+end
+
 
 # 3. Our calculations were completely off, turns out all of those animals went
 # extinct 3 years before the date provided. Update the values in extinct_animals
 # using #each, so they accurately reflect what year the animal went extinct.
 # ----
+
+extinct_animals.each do |x, y|
+  extinct_animals[x] = (y)- 3
+end
+
+p extinct_animals
 
 # 4. You've heard that the following animals might be extinct, but you're not sure.
 # Build a method  using #each that checks if an animal is in the hash and returns true/false.
@@ -76,6 +105,28 @@ extinct_animals = {
 # "Saiga Antelope"
 # Driver code example: is_extinct?(extinct_animals, "Andean Cat")
 # ----
+
+def is_it_dead(thing)
+  extinct_animals = {
+  "Passenger Pigeon" => 1914,
+  "Tasmanian Tiger" => 1936,
+  "Eastern Hare Wallaby" => 1890,
+  "Dodo" => 1662,
+  "Pyrenean Ibex" => 2000,
+  "West African Black Rhinoceros" => 2011,
+  "Laysan Crake" => 1923
+}
+
+  extinct_animals.each {|animal, year|
+    if animal == thing
+      puts "The #{thing} is extinct"
+    end
+  }
+
+end
+
+puts is_it_dead("Dodo")
+
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
