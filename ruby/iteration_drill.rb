@@ -87,7 +87,10 @@ end
 
 # 3. Our calculations were completely off, turns out all of those animals went
 # extinct 3 years before the date provided. Update the values in extinct_animals
-# using #each, so they accurately reflect what year the animal went extinct.
+# using #each, so they accurately reflect what year the animal went ext
+
+
+inct.
 # ----
 
 extinct_animals.each do |x, y|
@@ -133,3 +136,29 @@ puts is_it_dead("Dodo")
 # Find a Ruby Hash built-in method that helps you accomplish this or build
 # your own method using #each
 # ----
+
+def not_extinct(animal)
+    extinct_animals = {
+  "Passenger Pigeon" => 1914,
+  "Tasmanian Tiger" => 1936,
+  "Eastern Hare Wallaby" => 1890,
+  "Dodo" => 1662,
+  "Pyrenean Ibex" => 2000,
+  "West African Black Rhinoceros" => 2011,
+  "Laysan Crake" => 1923
+  }
+
+new_hash = {}
+
+  extinct_animals.each do |x, y|
+    if animal == x
+      new_hash.store(x, y)
+      extinct_animals.delete(x)
+    end
+
+  end
+     p new_hash
+     p extinct_animals
+end
+
+not_extinct("Passenger Pigeon")
