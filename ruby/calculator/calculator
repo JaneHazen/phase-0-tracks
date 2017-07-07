@@ -1,0 +1,66 @@
+class TodoList
+  def initialize(list_array)
+    @list = list_array
+  end
+
+  def get_items
+    @list
+  end
+
+  def add_item(item)
+    @list << item
+  end
+
+  def delete_item(item)
+    @list.delete(item)
+  end
+
+  def get_item(index)
+    @list[index]
+  end
+end
+
+
+# --------------------
+
+require_relative 'calculator'
+
+describe Calculator do
+  let(:calculator) { Calculator.new }
+
+  it "adds two integers" do
+    expect(calculator.add(3,4)).to eq 7
+  end
+
+  it "subtracts two integers" do
+    expect(calculator.subtract(7,1)).to eq 6
+  end
+
+  it "multiplies two integers" do
+    expect(calculator.multiply(2,3)).to eq 6
+  end
+    it "divides two integers" do
+    expect(calculator.divide(8,2)).to eq 4
+  end
+end
+
+# ---------------------
+
+class Calculator
+  def add(x,y)
+    x + y
+  end
+
+  def subtract(x,y)
+    x - y
+  end
+
+  def multiply(x,y)
+    x * y
+  end
+
+  def divide(x,y)
+    x / y
+  end
+
+end
