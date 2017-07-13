@@ -1,0 +1,25 @@
+# What are classes, use the following terms: class, state, behavior, instance variable, instance method
+
+A class is a block of code that lays out a blueprint that may describe the state and behavior of objects. The state describes attributes for a specific object. The behavior describes what objects are capable of. Any time we call on a class we are creating a new instance of the class. So if I had a class of family members, I could call on a specific instance of that class and name it “mom.” While there are other family members, “mom” would be my instance variable. “mom” would have the same behavior as all of the other instance of the family member class, but her state would be what I specifically called on her to do. I could have her do something by calling “mom” on an instance method. 
+
+#What are attributes? 
+
+Attributes are instance variables in classes. They are set to private by default so the only way to change them outside a class is to implement getter setter methods or use the attr_reader/accessor/writer methods. 
+
+#Give an example of a real world object and describe how you might assign its attributes if you were to design a class to represent that object.
+I’ve added the class JANE (myself) with some different attributes. Age can be read but not overwritten. What I’m doing today can be changed in any way. People can rewrite my nickname, but you can’t read it to see what it is so maybe it’s not actually a very nice nickname. 
+class JANE
+attr_accessor :what_i’m_doing_today
+attr_reader :age
+attr_writer :nickname
+end 
+
+#What is the purpose of the initialize method? When does it run?
+The initialize method is placed at the top of the class as the first method. It can be used to declare your variables and is a method of the object (rather than a method of the class as would be called outside of the object). 
+
+#What are modules?
+A module is a set of similar methods. 
+
+#What are different ways you can use a module?
+The compartmentalization of methods using modules can make your code easier to read/less busy. It also helps with namespacing- which means that it can be given one name and reused in different parts of the code so that separate programmers don’t accidentally all end up using the same name for one code. 
+They can also be written as mixins, meaning they can be combined into classes to add functionality. So different classes could use the same module as a mixin without having any other similar functions (and it would keep the same singular name). 
