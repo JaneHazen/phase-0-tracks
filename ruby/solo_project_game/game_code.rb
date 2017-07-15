@@ -15,7 +15,16 @@ class String_Work
         "-"
       end
     end
-    p sentence_array.join
+    sentence_array.join
+  end
+
+  def Are_we_done_yet(sentence_array)
+    if sentence_array.include?("-")
+      "You're an idiot! Try again, idiot!"
+    else
+      "WINNA!"
+    end
   end
 
 end
+
