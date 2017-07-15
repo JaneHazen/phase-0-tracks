@@ -1,14 +1,16 @@
-# Make a method that will make the sentence that will be guessed print as hyphens
 class String_Work
+  $guess_array = []
+
   def String_to_hyphens(sentence_goals)
     sentence_goals.gsub(/[a-zA-Z]/,"-")
   end
 
   def Guess_in_sentence(sentence_goals, guess)
+    $guess_array << guess
     sentence_array = sentence_goals.split("")
     sentence_array.map! do |x|
-      if x == guess
-        guess
+      if $guess_array.include?(x)
+        x
       elsif x == " "
         " "
       else
@@ -22,7 +24,7 @@ class String_Work
     if sentence_array.include?("-")
       "You're an idiot! Try again, idiot!"
     else
-      "WINNA!"
+      puts "WINNA!"
     end
   end
 
@@ -41,6 +43,7 @@ puts "Guess a letter, Player Two:"
 
 letter_guess = gets.chomp
 counter = 0
+
 while  string.Are_we_done_yet(string.Guess_in_sentence(secret_sentence,letter_guess)) != "WINNA!" && counter < 5
   counter += 1
   puts string.Guess_in_sentence(secret_sentence, letter_guess)
