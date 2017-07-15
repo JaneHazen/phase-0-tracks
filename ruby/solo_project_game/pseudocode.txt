@@ -1,0 +1,7 @@
+Gets phrase to use as Sentence_Goals. 
+Sentence_Goals is a string that will be guessed by the other person. Although it is a variable with values of different letters at each index point, it prints “-“ instead of letters.
+Get a Guess from the second user. 
+If Guess is in Sentence_Goals, map out the string to substitute the “-“ for the letter at that point. 
+Else, prints taunting message. 
+Returns new Sentence_Goals string after each Guess. 
+If all of the values in Sentence_Goals has been changed from “-“ to a letter print a congratulatory message. 
