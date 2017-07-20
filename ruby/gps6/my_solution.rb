@@ -6,24 +6,31 @@
 # EXPLANATION OF require_relative
 #
 #
+
+# if you use require you need to specify the directory path, if you use require_relative you need to be in the folder that the file is in
 require_relative 'state_data'
 
 class VirusPredictor
 
+# sets instance variables
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
-  def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
-  end
+#calls the following two methods and uses input from the instance variables specified above
 
   private
+  def virus_effects
+    predicted_deaths
+    speed_of_spread
+  end
 
-  def predicted_deaths(population_density, population, state)
+
+# conditional logic that uses all of the information from the hash to determine the number of deaths in each state based on population density and it prints the results
+
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,7 +48,8 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+# sets a variable and uses the population density of a state to adjust the speed that the virus will spread and prints a string with the result
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -68,6 +76,11 @@ end
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
+# iterate through the STATE_DATA hash and get out the keys
+STATE_DATA.each do |state, hash|
+  state = VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population])
+  state.virus_effects
+end
 
 
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
