@@ -43,5 +43,9 @@ yourFunction({animal: "Dog", legs: 4}, {animal: "Cat", legs: 3});
 // release 2
 //
 // build an array of the alphabet
-//set a variable that will pick a random number and select that item from the alphabet array and print it out (random number 1-10) times
+//set a variable that will pick a random number and select that item from that index in the alphabet array and print it out (random number 1-10) times
 // print those variables user_input times and put them in an array
+
+function gibberish_translator(integer){
+
+}
