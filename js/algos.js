@@ -60,4 +60,12 @@ function gibberish_translator(integer){
   console.log(array)
 }
 
+
 gibberish_translator(4)
+
+for (var i = 0; i < 10; i++) {
+    var array = []
+    array.push(gibberish_translator(Math.floor((Math.random() * 50) +1)))
+    console.log(array)
+    console.log(sizeMatters(array))
+}
