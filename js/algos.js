@@ -47,5 +47,14 @@ yourFunction({animal: "Dog", legs: 4}, {animal: "Cat", legs: 3});
 // print those variables user_input times and put them in an array
 
 function gibberish_translator(integer){
-
+  alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  for (var i = 0; i < integer; i++) {
+    for (var j = 0; j < (Math.floor((Math.random() * 10) + 1)); j++) {
+      rand_letter = alphabet[Math.floor(Math.random() * alphabet.length)];
+      console.log(rand_letter)
+    }
+    console.log(" ")
+  }
 }
+
+console.log(gibberish_translator(4))
