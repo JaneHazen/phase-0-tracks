@@ -48,13 +48,16 @@ yourFunction({animal: "Dog", legs: 4}, {animal: "Cat", legs: 3});
 
 function gibberish_translator(integer){
   alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  var array = [];
+  var words = "";
   for (var i = 0; i < integer; i++) {
     for (var j = 0; j < (Math.floor((Math.random() * 10) + 1)); j++) {
       rand_letter = alphabet[Math.floor(Math.random() * alphabet.length)];
-      console.log(rand_letter)
+      words += rand_letter
     }
-    console.log(" ")
+    array.push(words)
   }
+  console.log(array)
 }
 
-console.log(gibberish_translator(4))
+gibberish_translator(4)
