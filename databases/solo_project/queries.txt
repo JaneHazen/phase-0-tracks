@@ -1,0 +1,11 @@
+inner JOIN gets the intersection of the two tables
+left JOIN gets everything in table A regardless of a match as well as anything that matches in table B 
+right JOIN gets everything in table B regardless of a match as well as anything that matches in table A 
+FULL OUTER JOIN or FULL JOIN gets everything from both tables
+left excluding JOIN only gets things in table A that are not in table B 
+right excluding jOIN only gets things from table B that are not in table A
+outer excluding JOIN only gets things that do not overlap in each table 
+
+https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins
+
+my db was a little short on one table so the differences between the joins wasn’t overly noticeable but the graphs are helpful to get a visual on how they work. 
