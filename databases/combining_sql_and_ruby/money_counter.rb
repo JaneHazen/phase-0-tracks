@@ -35,14 +35,9 @@ def calculate_daily_total(db)
   total
 end
 
-def calculate_daily_average(money, total, date)
-  # if the date is the same, add up the daily total and divide it by the difference of primary keys (number of transactions)
-  current_date = DateTime.now.strftime(format='%Y-%m-%d')
-
-end
-
-def find_total_from_day(money, date)
-  daily_total= db.execute("SELECT SUM(change) WHERE today=?",[date])
+def find_total_from_day(db, date)
+  #pick up the sum of the total using the SUM function with sqlite (probably could have done this in the calculate_daily_total method as well....)
+  daily_total= db.execute("SELECT SUM(change) FROM money WHERE today=?",[date])
   daily_total
 end
 
@@ -51,7 +46,7 @@ text = <<-WERDS
 WERDS
 
 puts text
-action = gets.chomp.downcase
+action = gets.chomp
   if action == "add"
     puts "How much did you just spend?"
     number = gets.chomp
@@ -63,29 +58,15 @@ action = gets.chomp.downcase
     puts "So far your daily expenditure for today is #{daily_total}."
   elsif action == "e"
     puts "Thank you, goodbye!"
-  elsif action == /\d\d\d\d.\d\d\.\d\d/
-    puts action
+  elsif  /\d\d\d\d\W\d\d\W\d\d/.match(action)
+    that_day = find_total_from_day(db, action)
+    puts "Your total expenditure on #{action} was #{that_day[0]["SUM(change)"]}."
   else
-    puts "ohnoes!"
+    puts "Ohnoes! I didn't understand; I guess you'll have to restart."
   end
 
 
 
 
-# money.execute("SELECT * FROM money")
-
-
-# def calculate_weekly_average(money, last_transaction)
-
-# end
-
-# def get_weekly_average(money, last_transaction, total,)
-#   money.execute("INSERT INTO money (transaction) VALUES (?)", [last_transaction])
-# end
-
-
-
-# add_transaction(money, number)
-# get_weekly_average(money, )
 
 
