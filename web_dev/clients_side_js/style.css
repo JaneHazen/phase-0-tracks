@@ -1,0 +1,82 @@
+blockquote {
+  border-left: 5px solid blue;
+  padding: 15px;
+  margin-left: 0px;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+}
+
+#external-links {
+  display: inline;
+  float: left;
+  width: 25%;
+  position: relative;
+  padding: 2%;
+}
+
+#external-links ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+/* you're welcome to edit the
+image, figure, and figcaption CSS if you'd like, 
+but it's optional! */
+img {
+  width: 100%;
+}
+
+figure {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: right;
+}
+
+body  {
+  max-width: 960px;
+  margin: auto;
+}
+
+main  {
+  width: 60%;
+  float: left;
+  display: inline;
+  /*vertical-align: top;*/
+}
+
+/*@media screen and (max-width: 600px) {
+  .fig1 {
+    display:block;
+    float: left;
+  }
+  .fig2 {
+    display:block;
+    float: left;
+  }
+}*/
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1em;
+  }
+  ul {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  img {
+    min-width:250px;
+  }
+  blockquote  {
+    color: gray;
+    font-size: .8em;
+  }
+}
