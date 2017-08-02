@@ -17,6 +17,11 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/students/ordered' do
+  @students = db.execute("SELECT * FROM students")
+  erb :ordered_list_of_students
+end
+
 # create new students via
 # a form
 post '/students' do
