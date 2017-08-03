@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fish</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1 id="1fish"> ONE FISH </h1>
+  <h1 id="2fish"> TWO FISH </h1>
+  <h1 id="redfish"> RED FISH </h1>
+  <h1 id="bluefish"> BLUE FISH </h1>
+  <div><img src="images/fish1.png" id="firstfish" alt= "One fish"> </img></div>
+  <div><img src="images/fish2(1).png" id="secondfish" alt= "Second fish"> </img></div>
+  <div><img src="images/fish2(2).png" id="thirdfish" alt= "Third fish"> </img></div>
+
+</body>
+</html>
+
+<script>
+  $(function() {
+    // $("#firstfish").hide();
+    $("#secondfish").hide();
+    $("#thirdfish").hide();
+    $("#2fish").hide();
+    $("#redfish").hide();
+    $("#bluefish").hide();
+
+    $("#firstfish").on('click', function(){
+      $("#firstfish").hide(300);
+      $("#2fish").show();
+      $("#secondfish").show(500);
+      $("#thirdfish").show(500);
+    })
+
+    $("#secondfish").on('mouseover', function(){
+      $("#secondfish").css({
+      "-webkit-filter": "contrast(0) sepia(100%) hue-rotate(310deg) saturate(2000%) brightness(100%)",
+      "filter": "contrast(0) sepia(100%) hue-rotate(310deg) saturate(2000%) brightness(100%)",
+      "opacity": "1"});
+      $("#redfish").show();
+    })
+
+    $("#thirdfish").on('mouseover',function(){
+      $("#thirdfish").css({
+         "-webkit-filter": "contrast(0) sepia(100%) hue-rotate(190deg) saturate(2000%) brightness(100%)",
+        "filter": "contrast(0) sepia(100%) hue-rotate(190deg) saturate(2000%) brightness(100%)",
+        "opacity": "1"});
+      $("#bluefish").show();
+    })
+
+  });
+
+</script>
